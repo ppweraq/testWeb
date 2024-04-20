@@ -1,0 +1,36 @@
+// .slider-section.container {
+//     margin-top: 119px;
+// }
+.slider__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 670px); /* Две колонки шириной 670px */
+    gap: 20px;
+    padding: var(--container-padding) 0;
+}
+.title {
+    margin-top: 37px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.subtitle {
+    color: var(--text-color-hover);
+    width: 440px;
+    text-align: left;
+    // margin-bottom: 231px;
+
+}
+.slider {
+    position: relative;
+    border-bottom: 1px solid var(--border-opacity);
+
+}
+.slider_buttons {
+    position: absolute;
+    cursor: pointer;
+    bottom: 40px;
+    z-index: 1;
+
+    display: flex;
+    gap: 20px;
+}
+

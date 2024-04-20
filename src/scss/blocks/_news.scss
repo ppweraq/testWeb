@@ -1,0 +1,36 @@
+.news__title {
+    margin-top: 150px;
+    margin-bottom: 40px;
+}
+.news__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+
+    margin-bottom: 150px;
+
+}
+.news__item{
+    &:hover {
+        img {
+            border-radius: 20px;
+        }
+        h2 {
+            background: linear-gradient(180deg, #FB8627 0%, #F5BEF6 100%);
+            -webkit-background-clip: text; /* Для поддержки в браузерах WebKit, таких как Chrome и Safari */
+            background-clip: text; /* Поддержка для других браузеров */
+            color: transparent; /* Делаем текст прозрачным */
+        }
+    }
+}
+.news__subtitle {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+}
+.news__descr {
+    color: var(--text-color-hover);
+    margin-bottom: 20px;
+}

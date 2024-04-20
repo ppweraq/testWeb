@@ -1,0 +1,37 @@
+footer {
+	background: var(--gradient);
+	padding: 40px;
+	color: #fff;
+
+}
+.footer {
+	display: flex;
+	justify-content: space-between;
+}
+.footer__logo {
+	.logo__img {
+		margin-bottom: 20px;
+
+	}
+	.footer__icons {
+		display: flex;
+		gap: 16px;
+	}
+}
+
+.footer__nav {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 159px;
+}
+.footer__nav_left, .footer__nav_right {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.footer__address {
+	margin-bottom: 20px;
+}
+.footer__number {
+	margin-bottom: 10px;
+}
