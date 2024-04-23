@@ -5,6 +5,9 @@
   position: relative;
 
 }
+.nav_logo {
+  flex-shrink: 0;
+}
 .nav_list {
   display: flex;
   gap: 10px;

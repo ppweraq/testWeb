@@ -1,0 +1,44 @@
+@media (max-width: 885px) {
+    
+.nav__icon{
+	display: block;
+}
+.nav_list{
+    display: none;
+}
+.nav_btn  {
+    display: none;
+}
+
+.footer{
+    display: block;
+}
+.footer__logo {
+	display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 30px;
+    .logo__img {
+        width: 70px;
+        height: 84px;
+    }
+}
+
+.footer__contact {
+    margin-top: 40px;
+}
+
+
+
+
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 20px 10px 10px;
+    }
+    .nav_logo {
+        width: 44px;
+        height: 52px;
+    }
+}

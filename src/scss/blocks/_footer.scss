@@ -1,7 +1,15 @@
 footer {
 	background: var(--gradient);
-	padding: 40px;
+	padding: 40px 0;
 	color: #fff;
+	@include mobile {
+			padding: 30px 0;
+			.container{
+
+				padding: 0 10px;
+			}
+		
+	  }
 
 }
 .footer {
@@ -23,6 +31,9 @@ footer {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 159px;
+	@include mobile {
+		gap: 0;
+	}
 }
 .footer__nav_left, .footer__nav_right {
 	display: flex;

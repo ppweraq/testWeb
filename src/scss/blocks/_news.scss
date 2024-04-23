@@ -1,36 +1,93 @@
-.news__title {
-    margin-top: 150px;
-    margin-bottom: 40px;
-}
-.news__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 40px;
-
-    margin-bottom: 150px;
-
-}
-.news__item{
-    &:hover {
-        img {
-            border-radius: 20px;
-        }
-        h2 {
-            background: linear-gradient(180deg, #FB8627 0%, #F5BEF6 100%);
-            -webkit-background-clip: text; /* Для поддержки в браузерах WebKit, таких как Chrome и Safari */
-            background-clip: text; /* Поддержка для других браузеров */
-            color: transparent; /* Делаем текст прозрачным */
-        }
+.news {
+  @include mobile {
+    .container {
+      padding: 0;
     }
+  }
 }
-.news__subtitle {
+
+.news__title {
+  margin-top: 150px;
+  margin-bottom: 40px;
+  @include mobile {
+    padding: 0 10px;
+    font-size: 24px;
+    line-height: 26.4px;
+
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+}
+.swiper {
+  width: 100%;
+}
+
+.news__grid.swiper-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 440px);
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+  margin-bottom: 150px;
+  @include laptop {
+    img {
+      width: 100%;
+    }
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 630px) {
+  .news__grid.swiper-wrapper {
+    display: flex;
+    column-gap: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.news__item {
+  .news__subtitle {
     margin-top: 20px;
     margin-bottom: 10px;
     text-transform: uppercase;
-
-}
-.news__descr {
+  }
+  .news__descr {
     color: var(--text-color-hover);
     margin-bottom: 20px;
+  }
+
+  &:hover {
+    img {
+      border-radius: 20px;
+    }
+    h2 {
+      background: linear-gradient(180deg, #fb8627 0%, #f5bef6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+  @include mobile {
+    .news__subtitle,
+    .news__descr,
+    .news__date {
+      padding: 0 10px;
+    }
+    .news__subtitle {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+}
+
+.news__btn.slider_buttons {
+  display: none;
+  @include mobile {
+    display: flex;
+  }
 }

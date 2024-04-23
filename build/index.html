@@ -16,10 +16,10 @@
     />
   </head>
   <body>
-    <header class="header-content">
+    <header class="header">
   <div class="container">
     <nav class="head_nav">
-      <div class="nav_icon">
+      <div class="nav_logo">
         <img src="./img/icons/logo.svg" alt="logo" />
       </div>
       <ul class="nav_list link">
@@ -58,24 +58,93 @@
             />
           </a>
         </li>
-        <li><a class="nav_link" href="#!">Новости</a></li>
-        <li><a class="nav_link" href="#!">FAQ</a></li>
-        <li><a class="nav_link" href="#!">Контакты</a></li>
+        <li><a class="nav_link" href="#news">Новости</a></li>
+        <li><a class="nav_link" href="#FAQ">FAQ</a></li>
+        <li><a class="nav_link" href="#footer">Контакты</a></li>
       </ul>
       <div class="nav_btn link" >
-        <button class="btn btn_white" data-modal>Связаться с нами</button>
+        <button class="btn_white" data-modal>Связаться с нами</button>
+      </div>
+
+      <div class="nav__icon">
+        <button class="mobile-nav-btn">
+          <img class="nav-icon" src="../../img/icons/mobile_nav.svg" alt="">
+        </button>
       </div>
     </nav>
   </div>
 </header>
 <div class="mobile-nav">
-	<ul class="mobile-nav__list">
-		<li><a href="#" class="active">Home</a></li>
-		<li><a href="#!">Services</a></li>
-		<li><a href="#!">About</a></li>
-		<li><a href="#!">Projects</a></li>
-		<li><a href="#!">Contact</a></li>
-	</ul>
+  <div class="mobile-nav__links">
+      <ul class="mobile-links">
+
+		<li class="mobile-links__parent">
+			<button class="mobile-links__parent-btn">
+				<span class="mobile-links__parent-title link">О нас
+					<img
+					class="mobile_arrow_icon"
+					src="../../img/icons/arrow-top.svg"
+					alt="arrow"
+				  />
+				</span>
+				
+			</button>
+
+			<div class="mobile-sub">
+				<ul class="mobile-sub-list">
+					<li class="mobile-sub-list__item"><a href="#!" class="mobile-sub-list__link">О 500на700</a></li>
+					<li class="mobile-sub-list__item"><a href="#!" class="mobile-sub-list__link">Документы</a></li>
+					<li class="mobile-sub-list__item"><a href="#!" class="mobile-sub-list__link">Устойчивое развитие</a></li>
+					<li class="mobile-sub-list__item"><a href="#!" class="mobile-sub-list__link">Команда</a></li>
+					<li class="mobile-sub-list__item"><a href="#!" class="mobile-sub-list__link">Стратегия</a></li>
+					
+				</ul>
+			</div>
+
+		</li>
+
+		<li class="mobile-links__parent">
+			<button class="mobile-links__parent-btn">
+				<span class="mobile-links__parent-title  link">Проекты
+					<img
+					class="arrow_icon"
+					src="../../img/icons/arrow-top.svg"
+					alt="arrow"
+				  />
+				</span>
+
+			</button>
+		</li>
+
+		<li class="mobile-links__parent">
+			<button class="mobile-links__parent-btn">
+				<a href="#!" class="mobile-links__parent-title  link">Новости</a>
+			</button>
+		</li>
+
+		<li class="mobile-links__parent">
+			<button class="mobile-links__parent-btn">
+				<a href="#!" class="mobile-links__parent-title  link">FAQ</a>
+			</button>
+		</li>
+
+		<li class="mobile-links__parent">
+			<button class="mobile-links__parent-btn">
+				<a href="#!" class="mobile-links__parent-title link">Контакты</a>
+			</button>
+		</li>
+
+
+
+
+	  </ul>
+  </div>
+
+
+  <div class="mobile-nav__btn">
+	<button class="btn_white" data-modal>Связаться с нами</button>
+
+  </div>
 </div>
 
 
@@ -109,7 +178,6 @@
         </div>
     </div>
 </div>
-
     <div class="slider-section container">
   <section class="swiper slider">
     <div class="swiper-wrapper">
@@ -195,97 +263,107 @@
   </section>
 </div>
 
-    <section class="news">
-    <div class="container">
-        <h1 class="news__title">
-            НОВОСТИ
-        </h1>
+    <section class="news" id="news">
+  <div class=" container">
+    <h1 class="news__title">НОВОСТИ</h1>
 
-        <div class="news__grid">
+    <div class="swiper news__content ">
+      <div class="swiper-wrapper news__grid">
+        <!-- <div class=" "> -->
 
+          <div class="swiper-slide">
             <div class="news__item">
-                <img src="./img/news/news1.png" alt="">
-                <h2 class="news__subtitle">
-                    Заголовок новости 1
-                </h2>
-                <div class="text news__descr">
-                    Описание новости в 3 строки Описание новости в 3 строкиОписание новости в 3 строкиОписание новости в 3 строки Описание новости в 3 строки Описание...
-                </div>
-                <div class="text news__date">
-                    01 января 1990
-                </div>
+              <img src="./img/news/news1.png" alt="" />
+              <h2 class="news__subtitle">Заголовок новости 1</h2>
+              <div class="text news__descr">
+                Описание новости в 3 строки Описание новости в 3 строкиОписание
+                новости в 3 строкиОписание новости в 3 строки Описание новости в
+                3 строки Описание...
+              </div>
+              <div class="text news__date">01 января 1990</div>
             </div>
+          </div>
 
+          <div class="swiper-slide">
             <div class="news__item">
-                <img src="./img/news/news2.png" alt="">
-                <h2 class="news__subtitle">
-                    Заголовок новости 2
-                </h2>
-                <div class="text news__descr">
-                    Описание новости в 3 строки Описание новости в 3 строкиОписание новости в 3 строкиОписание новости в 3 строки Описание новости в 3 строки Описание...
-                </div>
-                <div class="text news__date">
-                    01 января 1990
-                </div>
+              <img src="./img/news/news2.png" alt="" />
+              <h2 class="news__subtitle">Заголовок новости 2</h2>
+              <div class="text news__descr">
+                Описание новости в 3 строки Описание новости в 3 строкиОписание
+                новости в 3 строкиОписание новости в 3 строки Описание новости в
+                3 строки Описание...
+              </div>
+              <div class="text news__date">01 января 1990</div>
             </div>
+          </div>
 
+          <div class="swiper-slide">
             <div class="news__item">
-                <img src="./img/news/news3.png" alt="">
-                <h2 class="news__subtitle">
-                    Заголовок новости 3
-                </h2>
-                <div class="text news__descr">
-                    Описание новости в 3 строки Описание новости в 3 строкиОписание новости в 3 строкиОписание новости в 3 строки Описание новости в 3 строки Описание...
-                </div>
-                <div class="text news__date">
-                    01 января 1990
-                </div>
+              <img src="./img/news/news3.png" alt="" />
+              <h2 class="news__subtitle">Заголовок новости 3</h2>
+              <div class="text news__descr">
+                Описание новости в 3 строки Описание новости в 3 строкиОписание
+                новости в 3 строкиОписание новости в 3 строки Описание новости в
+                3 строки Описание...
+              </div>
+              <div class="text news__date">01 января 1990</div>
             </div>
+          </div>
 
+          <div class="swiper-slide">
             <div class="news__item">
-                <img src="./img/news/news4.png" alt="">
-                <h2 class="news__subtitle">
-                    Заголовок новости 4
-                </h2>
-                <div class="text news__descr">
-                    Описание новости в 3 строки Описание новости в 3 строкиОписание новости в 3 строкиОписание новости в 3 строки Описание новости в 3 строки Описание...
-                </div>
-                <div class="text news__date">
-                    01 января 1990
-                </div>
+              <img src="./img/news/news4.png" alt="" />
+              <h2 class="news__subtitle">Заголовок новости 4</h2>
+              <div class="text news__descr">
+                Описание новости в 3 строки Описание новости в 3 строкиОписание
+                новости в 3 строкиОписание новости в 3 строки Описание новости в
+                3 строки Описание...
+              </div>
+              <div class="text news__date">01 января 1990</div>
             </div>
+          </div>
 
+          <div class="swiper-slide">
             <div class="news__item">
-                <img src="./img/news/news5.png" alt="">
-                <h2 class="news__subtitle">
-                    Заголовок новости 5
-                </h2>
-                <div class="text news__descr">
-                    Описание новости в 3 строки Описание новости в 3 строкиОписание новости в 3 строкиОписание новости в 3 строки Описание новости в 3 строки Описание...
-                </div>
-                <div class="text news__date">
-                    01 января 1990
-                </div>
+              <img src="./img/news/news5.png" alt="" />
+              <h2 class="news__subtitle">Заголовок новости 5</h2>
+              <div class="text news__descr">
+                Описание новости в 3 строки Описание новости в 3 строкиОписание
+                новости в 3 строкиОписание новости в 3 строки Описание новости в
+                3 строки Описание...
+              </div>
+              <div class="text news__date">01 января 1990</div>
             </div>
+          </div>
 
+          <div class="swiper-slide">
             <div class="news__item">
-                <img src="./img/news/news6.png" alt="">
-                <h2 class="news__subtitle">
-                    Заголовок новости 6
-                </h2>
-                <div class="text news__descr">
-                    Описание новости в 3 строки Описание новости в 3 строкиОписание новости в 3 строкиОписание новости в 3 строки Описание новости в 3 строки Описание...
-                </div>
-                <div class="text news__date">
-                    01 января 1990
-                </div>
+              <img src="./img/news/news6.png" alt="" />
+              <h2 class="news__subtitle">Заголовок новости 6</h2>
+              <div class="text news__descr">
+                Описание новости в 3 строки Описание новости в 3 строкиОписание
+                новости в 3 строкиОписание новости в 3 строки Описание новости в
+                3 строки Описание...
+              </div>
+              <div class="text news__date">01 января 1990</div>
             </div>
+          </div>
+          
+        <!-- </div> -->
         </div>
-
+        <div class="slider_buttons news__btn">
+          <div class="news-button-left">
+            <img src="../../img/icons/left-icon.svg" alt="" />
+          </div>
+          <div class="news-button-right">
+            <img src="../../img/icons/right-icon.svg" alt="" />
+          </div>
+        </div>
     </div>
-    
-</section>  
-    <section class="FAQ">
+  </div>
+</section>
+
+    <section class="FAQ" id="FAQ">
   <div class="container">
     <div class="faq">
       <h1 class="faq__title">FAQ</h1>
@@ -367,18 +445,24 @@
         <div>
 
             <div class="mailsit__inputs">
-              <div class="mailist__input">
-                <input type="text" placeholder="Электронная почта" />
-              </div>
-              <div class="mailist__input">
-                <input type="text" placeholder="Дата (например, 01.01.1990)" />
-              </div>
-              <div class="mailist__input">
-                <input type="tel" name="phone" id="phone" class="phone" pattern="\+\d{1,3}\s?\(\d{3}\)\s?\d{3}-\d{2}-\d{2}" placeholder="Телефон" />
-              </div>
-              <div class="mailist__input">
-                <input type="text" placeholder="Время (например, 10:00)" />
-              </div>
+              <!-- <div class="inputs__right"> -->
+                <div class="mailist__input">
+                  <input type="text" placeholder="Электронная почта" />
+                </div>
+                <div class="mailist__input">
+                  <input type="tel" name="phone" id="phone" class="phone" pattern="\+\d{1,3}\s?\(\d{3}\)\s?\d{3}-\d{2}-\d{2}" placeholder="Телефон" />
+                </div>
+                
+              <!-- </div > -->
+              <!-- <div class="inputs__right"> -->
+                <div class="mailist__input">
+                  <input type="text" placeholder="Дата (например, 01.01.1990)" />
+                </div>
+                <div class="mailist__input">
+                  <input type="text" placeholder="Время (например, 10:00)" />
+                </div>
+
+              <!-- </div> -->
             </div>
     
         </div>
@@ -404,7 +488,7 @@
   </div>
 </section>
 
-    <footer>
+    <footer id="footer">
 	<div class="container">
 		<div class="footer">
 

@@ -1,28 +1,55 @@
-// .slider-section.container {
-//     margin-top: 119px;
-// }
+.slider-section.container {
+    // margin-top: 119px;
+    @include mobile {
+        padding: 0;
+    }
+}
 .slider__grid {
     display: grid;
     grid-template-columns: repeat(2, 670px); /* Две колонки шириной 670px */
     gap: 20px;
     padding: var(--container-padding) 0;
+    @include laptop {
+        display: flex;
+    }
+    @include tablet {
+        .slider__left_page{
+            max-width: 560px;
+        }
+    }
+    @include mobile {
+        padding: 20px 0;
+    }
+    @media (max-width: 1050px){
+        display: flex;
+        flex-direction: column-reverse;
+        .slider__right_page img {
+            width: 100%;
+        }
+        .caption {
+            display: none;
+        }
+
+    }
 }
 .title {
     margin-top: 37px;
     margin-bottom: 20px;
     text-transform: uppercase;
+    @include mobile {
+     font-size: 24px;   
+     line-height: 26.4px;
+    }
 }
 .subtitle {
     color: var(--text-color-hover);
-    width: 440px;
+    max-width: 440px;
     text-align: left;
     // margin-bottom: 231px;
-
 }
 .slider {
     position: relative;
     border-bottom: 1px solid var(--border-opacity);
-
 }
 .slider_buttons {
     position: absolute;
@@ -32,5 +59,11 @@
 
     display: flex;
     gap: 20px;
+    @media (max-width: 1050px) {
+        position: relative;
+        margin: 20px 0;
+        bottom: auto; /* Сбрасываем bottom при медиа-запросе, чтобы элементы были в обычном потоке */
+        align-items: flex-start; 
+    }
 }
 
