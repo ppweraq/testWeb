@@ -1,16 +1,18 @@
 const gulp = require('gulp');
+const replace = require('gulp-replace');
 
 // HTML
 const fileInclude = require('gulp-file-include');
 const htmlclean = require('gulp-htmlclean');
-const webpHTML = require('gulp-webp-html');
+const webpHTML = require('gulp-webp-retina-html');
+const typograf = require('gulp-typograf');
 
 // SASS
 const sass = require('gulp-sass')(require('sass'));
 const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
 const csso = require('gulp-csso');
-const webpCss = require('gulp-webp-css');
+// const webImagesCSS = require('gulp-web-images-css');  //Вывод WEBP-изображений
 
 const server = require('gulp-server-livereload');
 const clean = require('gulp-clean');
@@ -25,8 +27,11 @@ const changed = require('gulp-changed');
 
 // Images
 const imagemin = require('gulp-imagemin');
-const webp = require('gulp-webp');
+const imageminWebp = require('imagemin-webp');
+const rename = require('gulp-rename');
 
+// SVG
+const svgsprite = require('gulp-svg-sprite');
 
 gulp.task('clean:docs', function (done) {
 	if (fs.existsSync('./docs/')) {
@@ -53,49 +58,158 @@ const plumberNotify = (title) => {
 };
 
 gulp.task('html:docs', function () {
-	return gulp
-		.src(['./src/html/*.html', './src/html/**/*.html', '!./src/html/blocks/**/*.html'])
-		.pipe(changed('./docs/'))
-		.pipe(plumber(plumberNotify('HTML')))
-		.pipe(fileInclude(fileIncludeSetting))
-		.pipe(webpHTML())
-		.pipe(htmlclean())
-		.pipe(gulp.dest('./docs/'));
+	return (
+		gulp
+			// .src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
+			.src([
+				'./src/html/**/*.html',
+				'!./**/blocks/**/*.*',
+				'!./src/html/docs/**/*.*',
+			])
+			.pipe(changed('./docs/'))
+			.pipe(plumber(plumberNotify('HTML')))
+			.pipe(fileInclude(fileIncludeSetting))
+			.pipe(
+				replace(/<img(?:.|\n|\r)*?>/g, function(match) {
+					return match
+						.replace(/\r?\n|\r/g, '')
+						.replace(/\s{2,}/g, ' ');
+				})
+			) //удаляет лишние пробелы и переводы строк внутри тега <img>
+			.pipe(
+				replace(
+					/(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
+					'$1./$4$5$7$1'
+				)
+			)
+			.pipe(
+				typograf({
+					locale: ['ru', 'en-US'],
+					htmlEntity: { type: 'digit' },
+					safeTags: [
+						['<\\?php', '\\?>'],
+						['<no-typography>', '</no-typography>'],
+					],
+				})
+			)
+			.pipe(
+				webpHTML({
+					extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp'],
+					retina: {
+						1: '',
+						2: '@2x',
+					},
+				})
+			)
+			.pipe(htmlclean())
+			.pipe(gulp.dest('./docs/'))
+	);
 });
 
 gulp.task('sass:docs', function () {
-	return gulp
-		.src('./src/scss/*.scss')
-		.pipe(changed('./docs/css/'))
-		.pipe(plumber(plumberNotify('SCSS')))
-		.pipe(sourceMaps.init())
-		.pipe(autoprefixer())
-		.pipe(sassGlob())
-		.pipe(webpCss())
-		.pipe(groupMedia())
-		.pipe(sass())
-		.pipe(csso())
-		.pipe(sourceMaps.write())
-		.pipe(gulp.dest('./docs/css/'));
+	return (
+		gulp
+			.src('./src/scss/*.scss')
+			.pipe(changed('./docs/css/'))
+			.pipe(plumber(plumberNotify('SCSS')))
+			.pipe(sourceMaps.init())
+			.pipe(sassGlob()) /* Первый */
+			.pipe(sass()) /* Второй */
+			.pipe(autoprefixer()) /* После SASS обработка CSS */
+			.pipe(groupMedia())
+			// .pipe(
+			// 	webImagesCSS({
+			// 		mode: 'webp',
+			// 	})
+			// )
+			.pipe(
+				replace(
+					/(['"]?)(\.\.\/)+(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
+					'$1$2$3$4$6$1'
+				)
+			)
+			.pipe(csso())
+			.pipe(sourceMaps.write())
+			.pipe(gulp.dest('./docs/css/'))
+	);
 });
 
 gulp.task('images:docs', function () {
-	return gulp
-		.src('./src/img/**/*')
-		.pipe(changed('./docs/img/'))
-		.pipe(webp())
-		.pipe(gulp.dest('./docs/img/'))
-		.pipe(gulp.src('./src/img/**/*'))
-		.pipe(changed('./docs/img/'))
-		.pipe(imagemin({ verbose: true }))
-		.pipe(gulp.dest('./docs/img/'));
+	return (
+		gulp
+			.src(['./src/img/**/*', '!./src/img/svgicons/**/*'])
+			.pipe(changed('./docs/img/'))
+			.pipe(
+				imagemin([
+					imageminWebp({
+						quality: 85,
+					}),
+				])
+			)
+			.pipe(rename({ extname: '.webp' }))
+			.pipe(gulp.dest('./docs/img/'))
+			.pipe(gulp.src('./src/img/**/*'))
+			.pipe(changed('./docs/img/'))
+			.pipe(
+				imagemin(
+					[
+						imagemin.gifsicle({ interlaced: true }),
+						imagemin.mozjpeg({ quality: 85, progressive: true }),
+						imagemin.optipng({ optimizationLevel: 5 }),
+					],
+					{ verbose: true }
+				)
+			)
+			.pipe(gulp.dest('./docs/img/'))
+	);
 });
 
-gulp.task('fonts:docs', function () {
+const svgStack = {
+	mode: {
+		stack: {
+			example: true,
+		},
+	},
+};
+
+const svgSymbol = {
+	mode: {
+		symbol: {
+			sprite: '../sprite.symbol.svg',
+		},
+	},
+	shape: {
+		transform: [
+			{
+				svgo: {
+					plugins: [
+						{
+							name: 'removeAttrs',
+							params: {
+								attrs: '(fill|stroke)',
+							},
+						},
+					],
+				},
+			},
+		],
+	},
+};
+
+gulp.task('svgStack:docs', function () {
 	return gulp
-		.src('./src/fonts/**/*')
-		.pipe(changed('./docs/fonts/'))
-		.pipe(gulp.dest('./docs/fonts/'));
+		.src('./src/img/svgicons/**/*.svg')
+		.pipe(plumber(plumberNotify('SVG:dev')))
+		.pipe(svgsprite(svgStack))
+		.pipe(gulp.dest('./docs/img/svgsprite/'));
+});
+
+gulp.task('svgSymbol:docs', function () {
+	return gulp
+		.src('./src/img/svgicons/**/*.svg')
+		.pipe(plumber(plumberNotify('SVG:dev')))
+		.pipe(svgsprite(svgSymbol))
+		.pipe(gulp.dest('./docs/img/svgsprite/'));
 });
 
 gulp.task('files:docs', function () {

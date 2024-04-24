@@ -1,515 +1,489 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Стартовый шаблон</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="header">
-  <div class="container">
-    <nav class="head_nav">
-      <div class="nav_logo">
-        <img src="./img/icons/logo.svg" alt="logo" />
-      </div>
-      <ul class="nav_list link">
-        <li class="dropdown">
-          <a class="menu_link" href="#!"
-            >О нас
-            <img
-              class="arrow_icon"
-              src="../../img/icons/arrow-top.svg"
-              alt="arrow"
-            />
-          </a>
-          <div class="dropdown-content">
-            <ul class="menu_column">
-              <li><a href="#">О 500 на 700</a></li>
-              <li><a href="#">Документы</a></li>
-              <li><a href="#">Устойчивое развитие</a></li>
-            </ul>
-            <ul class="menu_column">
-              <li><a href="#">Команда</a></li>
-              <li><a href="#">Стратегия</a></li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a class="menu_link" href="#!">
-            Проекты
-            <img
-              class="arrow_icon"
-              src="../../img/icons/arrow-top.svg"
-              alt="arrow"
-            />
-          </a>
-        </li>
-        <li><a class="nav_link" href="#news">Новости</a></li>
-        <li><a class="nav_link" href="#FAQ">FAQ</a></li>
-        <li><a class="nav_link" href="#footer">Контакты</a></li>
-      </ul>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Стартовый шаблон</title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<nav class="head_nav">
+					<div class="nav_logo">
+						<img src="./img/icons/logo.svg" alt="logo" />
+					</div>
+					<ul class="nav_list link">
+						<li class="dropdown">
+							<a class="menu_link" href="#!"
+								>О&#160;нас
+								<img class="arrow_icon" src="./img/icons/arrow-top.svg" alt="arrow" />
+							</a>
+							<div class="dropdown-content">
+								<ul class="menu_column">
+									<li><a href="#">О&#160;500 на&#160;700</a></li>
+									<li><a href="#">Документы</a></li>
+									<li><a href="#">Устойчивое развитие</a></li>
+								</ul>
+								<ul class="menu_column">
+									<li><a href="#">Команда</a></li>
+									<li><a href="#">Стратегия</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a class="menu_link" href="#!">
+								Проекты
+								<img class="arrow_icon" src="./img/icons/arrow-top.svg" alt="arrow" />
+							</a>
+						</li>
+						<li><a class="nav_link" href="#news">Новости</a></li>
+						<li><a class="nav_link" href="#FAQ">FAQ</a></li>
+						<li><a class="nav_link" href="#footer">Контакты</a></li>
+					</ul>
 
-      <div class="nav_btn link">
-        <a class="btn_white" data-modal>Связаться с нами</a>
-      </div>
+					<div class="nav_btn link">
+						<a class="btn_white" data-modal>Связаться с&#160;нами</a>
+					</div>
 
-      <div class="nav__icon">
-        <button class="mobile-nav-btn">
-          <img class="nav-icon" src="../../img/icons/mobile_nav.svg" alt="" />
-        </button>
-      </div>
-    </nav>
-  </div>
-</header>
-<div class="mobile-nav">
-  <div class="mobile-nav__links">
-    <ul class="mobile-links">
-      <li class="mobile-links__parent">
-        <button class="mobile-links__parent-btn">
-          <span class="mobile-links__parent-title link"
-            >О нас
-            <img
-              class="mobile_arrow_icon"
-              src="../../img/icons/arrow-top.svg"
-              alt="arrow"
-            />
-          </span>
-        </button>
-
-        <div class="mobile-sub">
-          <ul class="mobile-sub-list">
-            <li class="mobile-sub-list__item">
-              <a href="#!" class="mobile-sub-list__link">О 500на700</a>
-            </li>
-            <li class="mobile-sub-list__item">
-              <a href="#!" class="mobile-sub-list__link">Документы</a>
-            </li>
-            <li class="mobile-sub-list__item">
-              <a href="#!" class="mobile-sub-list__link">Устойчивое развитие</a>
-            </li>
-            <li class="mobile-sub-list__item">
-              <a href="#!" class="mobile-sub-list__link">Команда</a>
-            </li>
-            <li class="mobile-sub-list__item">
-              <a href="#!" class="mobile-sub-list__link">Стратегия</a>
-            </li>
-          </ul>
-        </div>
-      </li>
-
-      <li class="mobile-links__parent">
-        <button class="mobile-links__parent-btn">
-          <span class="mobile-links__parent-title link"
-            >Проекты
-            <img
-              class="arrow_icon"
-              src="../../img/icons/arrow-top.svg"
-              alt="arrow"
-            />
-          </span>
-        </button>
-      </li>
-
-      <li class="mobile-links__parent">
-        <button class="mobile-links__parent-btn">
-          <a href="#!" class="mobile-links__parent-title link">Новости</a>
-        </button>
-      </li>
-
-      <li class="mobile-links__parent">
-        <button class="mobile-links__parent-btn">
-          <a href="#!" class="mobile-links__parent-title link">FAQ</a>
-        </button>
-      </li>
-
-      <li class="mobile-links__parent">
-        <button class="mobile-links__parent-btn">
-          <a href="#!" class="mobile-links__parent-title link">Контакты</a>
-        </button>
-      </li>
-    </ul>
-  </div>
-
-  <div class="mobile-nav__btn">
-    <button class="btn_white" data-modal>Связаться с нами</button>
-  </div>
-</div>
-
-
-    <div class="modal" >
-    <div class="modal__dialog">
-        <div class="modal__content">
-                <div class="modal__heading">
-                    <div class="modal__title"><h2>Связаться с нами</h2></div>
-                    <div >
-                        <img class="modal__close" data-close src="../../img/icons/close.svg" alt="">
-                    </div>
-                </div>
-                <div class="modal__inputs">
-                    <input  placeholder="Имя" name="name" type="text" class="modal__input mailist__input">
-                    <input  placeholder="Телефон" name="phone" type="tel" class="modal__input mailist__input phone">
-
-                </div>
-                <form class="mailist__checkbox">
-                    <input type="checkbox" id="personal-data-agreement-2" />
-                    <label for="personal-data-agreement-2" class="caption"> 
-                      <span class="checkbox">
-                          <span class="check">
-                          </span>
-                      </span>
-                      Я согласен (-а) на обработку персональных данных</label
-                    >
-                  </form>
-                  <div class="modal__button  mailist__button link ">
-                    <a class="mail-btn">Отправить</a>
-                  </div>
-        </div>
-    </div>
-</div>
-    <div class="slider-section container">
-  <section class="swiper slider">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="slider__grid">
-          <div class="slider__left_page">
-            <div class="caption">
-              <img src="../../img/icons/tag.svg" alt="tag" />
-            </div>
-            <h1 class="title">Заголо вок 1 Заголо вок 1 Заголо вок 1</h1>
-            <p class="text subtitle">
-              Описание проекта Описание проекта Описание проекта Описание
-              проекта Описание проекта Описание проекта Описание проекта
-              Описание проекта
-            </p>
-          </div>
-          <div class="slider__right_page">
-            <img src="../../img/slider/site1.png" alt="site" />
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="slider__grid">
-          <div class="slider__left_page">
-            <div class="caption">
-              <img src="../../img/icons/tag.svg" alt="tag" />
-            </div>
-            <h1 class="title">Заголо вок 2 Заголо вок 2 Заголо вок 2</h1>
-            <p class="text subtitle">
-              Описание проекта Описание проекта Описание проекта Описание
-              проекта Описание проекта Описание проекта Описание проекта
-              Описание проекта
-            </p>
-          </div>
-          <div class="slider__right_page">
-            <img src="../../img/slider/site2.png" alt="site" />
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="slider__grid">
-          <div class="slider__left_page">
-            <div class="caption">
-              <img src="../../img/icons/tag.svg" alt="tag" />
-            </div>
-            <h1 class="title">Заголо вок 3 Заголо вок 3 Заголо вок 3</h1>
-            <p class="text subtitle">
-              Описание проекта Описание проекта Описание проекта Описание
-              проекта Описание проекта Описание проекта Описание проекта
-              Описание проекта
-            </p>
-          </div>
-          <div class="slider__right_page">
-            <img src="../../img/slider/site3.png" alt="site" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="slider_buttons">
-      <div class="swiper-button-left">
-        <img src="../../img/icons/left-icon.svg" alt="" />
-      </div>
-      <div class="swiper-button-right">
-        <img src="../../img/icons/right-icon.svg" alt="" />
-      </div>
-    </div>
-  </section>
-</div>
-
-    <section class="news" id="news">
-  <div class=" container">
-    <h1 class="news__title">НОВОСТИ</h1>
-
-    <div class="swiper news__content ">
-      <div class="swiper-wrapper news__grid">
-        <!-- <div class=" "> -->
-
-          <div class="swiper-slide">
-            <div class="news__item">
-              <img src="./img/news/news1.png" alt="" />
-              <h2 class="news__subtitle">Заголовок новости 1</h2>
-              <div class="text news__descr">
-                Описание новости в 3 строки Описание новости в 3 строкиОписание
-                новости в 3 строкиОписание новости в 3 строки Описание новости в
-                3 строки Описание...
-              </div>
-              <div class="text news__date">01 января 1990</div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="news__item">
-              <img src="./img/news/news2.png" alt="" />
-              <h2 class="news__subtitle">Заголовок новости 2</h2>
-              <div class="text news__descr">
-                Описание новости в 3 строки Описание новости в 3 строкиОписание
-                новости в 3 строкиОписание новости в 3 строки Описание новости в
-                3 строки Описание...
-              </div>
-              <div class="text news__date">01 января 1990</div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="news__item">
-              <img src="./img/news/news3.png" alt="" />
-              <h2 class="news__subtitle">Заголовок новости 3</h2>
-              <div class="text news__descr">
-                Описание новости в 3 строки Описание новости в 3 строкиОписание
-                новости в 3 строкиОписание новости в 3 строки Описание новости в
-                3 строки Описание...
-              </div>
-              <div class="text news__date">01 января 1990</div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="news__item">
-              <img src="./img/news/news4.png" alt="" />
-              <h2 class="news__subtitle">Заголовок новости 4</h2>
-              <div class="text news__descr">
-                Описание новости в 3 строки Описание новости в 3 строкиОписание
-                новости в 3 строкиОписание новости в 3 строки Описание новости в
-                3 строки Описание...
-              </div>
-              <div class="text news__date">01 января 1990</div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="news__item">
-              <img src="./img/news/news5.png" alt="" />
-              <h2 class="news__subtitle">Заголовок новости 5</h2>
-              <div class="text news__descr">
-                Описание новости в 3 строки Описание новости в 3 строкиОписание
-                новости в 3 строкиОписание новости в 3 строки Описание новости в
-                3 строки Описание...
-              </div>
-              <div class="text news__date">01 января 1990</div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="news__item">
-              <img src="./img/news/news6.png" alt="" />
-              <h2 class="news__subtitle">Заголовок новости 6</h2>
-              <div class="text news__descr">
-                Описание новости в 3 строки Описание новости в 3 строкиОписание
-                новости в 3 строкиОписание новости в 3 строки Описание новости в
-                3 строки Описание...
-              </div>
-              <div class="text news__date">01 января 1990</div>
-            </div>
-          </div>
-          
-        <!-- </div> -->
-        </div>
-        <div class="slider_buttons news__btn">
-          <div class="news-button-left">
-            <img src="../../img/icons/left-icon.svg" alt="" />
-          </div>
-          <div class="news-button-right">
-            <img src="../../img/icons/right-icon.svg" alt="" />
-          </div>
-        </div>
-    </div>
-  </div>
-</section>
-
-    <section class="FAQ" id="FAQ">
-  <div class="container">
-    <div class="faq">
-      <h1 class="faq__title">FAQ</h1>
-      <div class="faq__items">
-
-        <div class="faq__item">
-          <div class="faq__question">
-            <h2>Какие услуги предоставляет ваша студия?</h2>
-            <img
-              class="arrow_icon"
-              src="../../img/icons/arrow-top.svg"
-              alt="arrow"
-            />
-          </div>
-          <div class="faq__answer">
-            <p class="text">
-              Мы придерживаемся высоких стандартов качества и стремимся
-              создавать уникальный дизайн, отвечающий потребностям и ожиданиям
-              наших клиентов. Наши дизайнеры постоянно совершенствуют свои
-              навыки и следят за новыми трендами в дизайне.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq__item">
-            <div class="faq__question">
-              <h2>Как вы обеспечиваете качество и уникальность дизайна?</h2>
-              <img
-                class="arrow_icon"
-                src="../../img/icons/arrow-top.svg"
-                alt="arrow"
-              />
-            </div>
-            <div class="faq__answer">
-              <p class="text">
-                Мы придерживаемся высоких стандартов качества и стремимся
-                создавать уникальный дизайн, отвечающий потребностям и ожиданиям
-                наших клиентов. Наши дизайнеры постоянно совершенствуют свои
-                навыки и следят за новыми трендами в дизайне.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq__item">
-            <div class="faq__question">
-              <h2>Предоставляете ли вы услуги по созданию контента для сайтов и приложений?</h2>
-              <img
-                class="arrow_icon"
-                src="../../img/icons/arrow-top.svg"
-                alt="arrow"
-              />
-            </div>
-            <div class="faq__answer">
-              <p class="text">
-                Мы придерживаемся высоких стандартов качества и стремимся
-                создавать уникальный дизайн, отвечающий потребностям и ожиданиям
-                наших клиентов. Наши дизайнеры постоянно совершенствуют свои
-                навыки и следят за новыми трендами в дизайне.
-              </p>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <section class="mailist">
-  <div class="container">
-    <div class="mailist__content">
-      <div class="mailist__left">
-        <div class="mailist_title">
-          <h1>
-            Подпишись <br />
-            на рассылку
-          </h1>
-          <div class="text">
-            <p>
-              Отправляем анонсы новых статей, <br />
-              выпусков и трансляций
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="mailist__right">
-        <div>
-          <div class="mailsit__inputs">
-            <div class="mailist__input">
-              <input type="text" placeholder="Электронная почта" />
-            </div>
-            <div class="mailist__input">
-              <input type="text" placeholder="Дата (например, 01.01.1990)" />
-            </div>
-            <div class="mailist__input">
-              <input
-                type="tel"
-                name="phone"
-                id="phone"
-                class="phone"
-                pattern="\+\d{1,3}\s?\(\d{3}\)\s?\d{3}-\d{2}-\d{2}"
-                placeholder="Телефон"
-              />
-            </div>
-            <div class="mailist__input">
-              <input type="text" placeholder="Время (например, 10:00)" />
-            </div>
-          </div>
-        </div>
-        <form class="mailist__checkbox">
-          <input type="checkbox" id="personal-data-agreement-1" />
-          <label for="personal-data-agreement-1" class="caption">
-            <span class="checkbox">
-              <span class="check"> </span>
-            </span>
-            Я согласен (-а) на обработку персональных данных</label
-          >
-        </form>
-        <div class="mailist__button link">
-          <a class="mail-btn">Подписаться</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <footer id="footer">
-	<div class="container">
-		<div class="footer">
-
-			<div class="footer__logo">
-				<img class="logo__img" src="../../img/icons/logo-white.svg" alt="">
-				<div class="footer__icons">
-					<img src="../../img/icons/youtube.svg" alt="">
-					<img src="../../img/icons/telegram.svg" alt="">
-					<img src="../../img/icons/vk.svg" alt="">
-				</div>
+					<div class="nav__icon">
+						<button class="mobile-nav-btn">
+							<img class="nav-icon" src="./img/icons/mobile_nav.svg" alt="" />
+						</button>
+					</div>
+				</nav>
 			</div>
-	
-			<div class="footer__nav">
-				<div class="footer__nav_left">
-					<a class="link"  href="#!">О нас</a>
-					<a class="link"  href="#!">Проекты</a>
-					<a class="link"  href="#!">Новости</a>
-				</div>
-				<div class="footer__nav_right">
-					<a class="link"  href="#!">FAQ</a>
-					<a class="link"  href="#!">Контакты</a>
-				</div>
+		</header>
+		<div class="mobile-nav">
+			<div class="mobile-nav__links">
+				<ul class="mobile-links">
+					<li class="mobile-links__parent">
+						<button class="mobile-links__parent-btn">
+							<span class="mobile-links__parent-title link"
+								>О&#160;нас
+								<img class="mobile_arrow_icon" src="./img/icons/arrow-top.svg" alt="arrow" />
+							</span>
+						</button>
+
+						<div class="mobile-sub">
+							<ul class="mobile-sub-list">
+								<li class="mobile-sub-list__item">
+									<a href="#!" class="mobile-sub-list__link">О&#160;500на700</a>
+								</li>
+								<li class="mobile-sub-list__item">
+									<a href="#!" class="mobile-sub-list__link">Документы</a>
+								</li>
+								<li class="mobile-sub-list__item">
+									<a href="#!" class="mobile-sub-list__link">Устойчивое развитие</a>
+								</li>
+								<li class="mobile-sub-list__item">
+									<a href="#!" class="mobile-sub-list__link">Команда</a>
+								</li>
+								<li class="mobile-sub-list__item">
+									<a href="#!" class="mobile-sub-list__link">Стратегия</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li class="mobile-links__parent">
+						<button class="mobile-links__parent-btn">
+							<span class="mobile-links__parent-title link"
+								>Проекты
+								<img class="arrow_icon" src="./img/icons/arrow-top.svg" alt="arrow" />
+							</span>
+						</button>
+					</li>
+
+					<li class="mobile-links__parent">
+						<button class="mobile-links__parent-btn">
+							<a href="#!" class="mobile-links__parent-title link">Новости</a>
+						</button>
+					</li>
+
+					<li class="mobile-links__parent">
+						<button class="mobile-links__parent-btn">
+							<a href="#!" class="mobile-links__parent-title link">FAQ</a>
+						</button>
+					</li>
+
+					<li class="mobile-links__parent">
+						<button class="mobile-links__parent-btn">
+							<a href="#!" class="mobile-links__parent-title link">Контакты</a>
+						</button>
+					</li>
+				</ul>
 			</div>
-	
-			<div class="footer__contact">
-				<div class="footer__address link">г. Горгород,<br> ул. Мегаполисная, 1</div>
-				<div class="footer__number link">+7 (000) 000-00-00</div>
-				<div class="footer__email link">email@email.ru</div>
-	
+
+			<div class="mobile-nav__btn">
+				<button class="btn_white" data-modal>Связаться с&#160;нами</button>
 			</div>
 		</div>
-	</div>
-</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/imask"></script>
-    <script src="./js/index.bundle.js"></script>
-  </body>
+		<div class="modal">
+			<div class="modal__dialog">
+				<div class="modal__content">
+					<div class="modal__heading">
+						<div class="modal__title"><h2>Связаться с&#160;нами</h2></div>
+						<div>
+							<img class="modal__close" data-close src="./img/icons/close.svg" alt="" />
+						</div>
+					</div>
+					<div class="modal__inputs">
+						<input placeholder="Имя" name="name" type="text" class="modal__input mailist__input" />
+						<input placeholder="Телефон" name="phone" type="tel" class="modal__input mailist__input phone" />
+					</div>
+					<form class="mailist__checkbox">
+						<input type="checkbox" id="personal-data-agreement-2" />
+						<label for="personal-data-agreement-2" class="caption">
+							<span class="checkbox">
+								<span class="check"> </span>
+							</span>
+							Я&#160;согласен (-а) на&#160;обработку персональных данных</label
+						>
+					</form>
+					<div class="modal__button  mailist__button link ">
+						<a class="mail-btn">Отправить</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider-section container">
+			<section class="swiper slider">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="slider__grid">
+							<div class="slider__left_page">
+								<div class="caption">
+									<img src="./img/icons/tag.svg" alt="tag" />
+								</div>
+								<h1 class="title">Заголо вок 1 Заголо вок 1 Заголо вок 1</h1>
+								<p class="text subtitle">
+									Описание проекта Описание проекта Описание проекта Описание проекта Описание проекта Описание проекта Описание проекта Описание проекта
+								</p>
+							</div>
+							<div class="slider__right_page">
+								<picture>
+									<source srcset="./img/slider/site1.webp 1x, ./img/slider/site1@2x.webp 2x" type="image/webp" />
+									<source srcset="./img/slider/site1.png 1x, ./img/slider/site1@2x.png 2x" type="image/png" />
+									<img src="./img/slider/site1.png" alt="site" />
+								</picture>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide">
+						<div class="slider__grid">
+							<div class="slider__left_page">
+								<div class="caption">
+									<img src="./img/icons/tag.svg" alt="tag" />
+								</div>
+								<h1 class="title">Заголо вок 2 Заголо вок 2 Заголо вок 2</h1>
+								<p class="text subtitle">
+									Описание проекта Описание проекта Описание проекта Описание проекта Описание проекта Описание проекта Описание проекта Описание проекта
+								</p>
+							</div>
+							<div class="slider__right_page">
+								<picture>
+									<source srcset="./img/slider/site2.webp 1x, ./img/slider/site2@2x.webp 2x" type="image/webp" />
+									<source srcset="./img/slider/site2.png 1x, ./img/slider/site2@2x.png 2x" type="image/png" />
+									<img src="./img/slider/site2.png" alt="site" />
+								</picture>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide">
+						<div class="slider__grid">
+							<div class="slider__left_page">
+								<div class="caption">
+									<img src="./img/icons/tag.svg" alt="tag" />
+								</div>
+								<h1 class="title">Заголо вок 3 Заголо вок 3 Заголо вок 3</h1>
+								<p class="text subtitle">
+									Описание проекта Описание проекта Описание проекта Описание проекта Описание проекта Описание проекта Описание проекта Описание проекта
+								</p>
+							</div>
+							<div class="slider__right_page">
+								<picture>
+									<source srcset="./img/slider/site3.webp 1x, ./img/slider/site3@2x.webp 2x" type="image/webp" />
+									<source srcset="./img/slider/site3.png 1x, ./img/slider/site3@2x.png 2x" type="image/png" />
+									<img src="./img/slider/site3.png" alt="site" />
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slider_buttons">
+					<div class="swiper-button-left">
+						<img src="./img/icons/left-icon.svg" alt="" />
+					</div>
+					<div class="swiper-button-right">
+						<img src="./img/icons/right-icon.svg" alt="" />
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<section class="news" id="news">
+			<div class=" container">
+				<h1 class="news__title">НОВОСТИ</h1>
+
+				<div class="swiper news__content ">
+					<div class="swiper-wrapper news__grid">
+						<!-- <div class=" "> -->
+
+						<div class="swiper-slide">
+							<div class="news__item">
+								<picture>
+									<source srcset="./img/news/news1.webp 1x, ./img/news/news1@2x.webp 2x" type="image/webp" />
+									<source srcset="./img/news/news1.png 1x, ./img/news/news1@2x.png 2x" type="image/png" />
+									<img src="./img/news/news1.png" alt="" />
+								</picture>
+								<h2 class="news__subtitle">Заголовок новости 1</h2>
+								<div class="text news__descr">
+									Описание новости в&#160;3 строки Описание новости в&#160;3 строкиОписание новости в&#160;3 строкиОписание новости в&#160;3 строки Описание новости
+									в 3 строки Описание&#8230;
+								</div>
+								<div class="text news__date">01&#160;января 1990</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="news__item">
+								<picture>
+									<source srcset="./img/news/news2.webp 1x, ./img/news/news2@2x.webp 2x" type="image/webp" />
+									<source srcset="./img/news/news2.png 1x, ./img/news/news2@2x.png 2x" type="image/png" />
+									<img src="./img/news/news2.png" alt="" />
+								</picture>
+								<h2 class="news__subtitle">Заголовок новости 2</h2>
+								<div class="text news__descr">
+									Описание новости в&#160;3 строки Описание новости в&#160;3 строкиОписание новости в&#160;3 строкиОписание новости в&#160;3 строки Описание новости
+									в 3 строки Описание&#8230;
+								</div>
+								<div class="text news__date">01&#160;января 1990</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="news__item">
+								<picture>
+									<source srcset="./img/news/news3.webp 1x, ./img/news/news3@2x.webp 2x" type="image/webp" />
+									<source srcset="./img/news/news3.png 1x, ./img/news/news3@2x.png 2x" type="image/png" />
+									<img src="./img/news/news3.png" alt="" />
+								</picture>
+								<h2 class="news__subtitle">Заголовок новости 3</h2>
+								<div class="text news__descr">
+									Описание новости в&#160;3 строки Описание новости в&#160;3 строкиОписание новости в&#160;3 строкиОписание новости в&#160;3 строки Описание новости
+									в 3 строки Описание&#8230;
+								</div>
+								<div class="text news__date">01&#160;января 1990</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="news__item">
+								<picture>
+									<source srcset="./img/news/news4.webp 1x, ./img/news/news4@2x.webp 2x" type="image/webp" />
+									<source srcset="./img/news/news4.png 1x, ./img/news/news4@2x.png 2x" type="image/png" />
+									<img src="./img/news/news4.png" alt="" />
+								</picture>
+								<h2 class="news__subtitle">Заголовок новости 4</h2>
+								<div class="text news__descr">
+									Описание новости в&#160;3 строки Описание новости в&#160;3 строкиОписание новости в&#160;3 строкиОписание новости в&#160;3 строки Описание новости
+									в 3 строки Описание&#8230;
+								</div>
+								<div class="text news__date">01&#160;января 1990</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="news__item">
+								<picture>
+									<source srcset="./img/news/news5.webp 1x, ./img/news/news5@2x.webp 2x" type="image/webp" />
+									<source srcset="./img/news/news5.png 1x, ./img/news/news5@2x.png 2x" type="image/png" />
+									<img src="./img/news/news5.png" alt="" />
+								</picture>
+								<h2 class="news__subtitle">Заголовок новости 5</h2>
+								<div class="text news__descr">
+									Описание новости в&#160;3 строки Описание новости в&#160;3 строкиОписание новости в&#160;3 строкиОписание новости в&#160;3 строки Описание новости
+									в 3 строки Описание&#8230;
+								</div>
+								<div class="text news__date">01&#160;января 1990</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="news__item">
+								<picture>
+									<source srcset="./img/news/news6.webp 1x, ./img/news/news6@2x.webp 2x" type="image/webp" />
+									<source srcset="./img/news/news6.png 1x, ./img/news/news6@2x.png 2x" type="image/png" />
+									<img src="./img/news/news6.png" alt="" />
+								</picture>
+								<h2 class="news__subtitle">Заголовок новости 6</h2>
+								<div class="text news__descr">
+									Описание новости в&#160;3 строки Описание новости в&#160;3 строкиОписание новости в&#160;3 строкиОписание новости в&#160;3 строки Описание новости
+									в 3 строки Описание&#8230;
+								</div>
+								<div class="text news__date">01&#160;января 1990</div>
+							</div>
+						</div>
+
+						<!-- </div> -->
+					</div>
+					<div class="slider_buttons news__btn">
+						<div class="news-button-left">
+							<img src="./img/icons/left-icon.svg" alt="" />
+						</div>
+						<div class="news-button-right">
+							<img src="./img/icons/right-icon.svg" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="FAQ" id="FAQ">
+			<div class="container">
+				<div class="faq">
+					<h1 class="faq__title">FAQ</h1>
+					<div class="faq__items">
+						<div class="faq__item">
+							<div class="faq__question">
+								<h2>Какие услуги предоставляет ваша студия?</h2>
+								<img class="arrow_icon" src="./img/icons/arrow-top.svg" alt="arrow" />
+							</div>
+							<div class="faq__answer">
+								<p class="text">
+									Мы&#160;придерживаемся высоких стандартов качества и&#160;стремимся создавать уникальный дизайн, отвечающий потребностям и&#160;ожиданиям наших
+									клиентов. Наши дизайнеры постоянно совершенствуют свои навыки и&#160;следят за&#160;новыми трендами в&#160;дизайне.
+								</p>
+							</div>
+						</div>
+
+						<div class="faq__item">
+							<div class="faq__question">
+								<h2>Как вы&#160;обеспечиваете качество и&#160;уникальность дизайна?</h2>
+								<img class="arrow_icon" src="./img/icons/arrow-top.svg" alt="arrow" />
+							</div>
+							<div class="faq__answer">
+								<p class="text">
+									Мы&#160;придерживаемся высоких стандартов качества и&#160;стремимся создавать уникальный дизайн, отвечающий потребностям и&#160;ожиданиям наших
+									клиентов. Наши дизайнеры постоянно совершенствуют свои навыки и&#160;следят за&#160;новыми трендами в&#160;дизайне.
+								</p>
+							</div>
+						</div>
+
+						<div class="faq__item">
+							<div class="faq__question">
+								<h2>Предоставляете&#160;ли вы&#160;услуги по&#160;созданию контента для сайтов и&#160;приложений?</h2>
+								<img class="arrow_icon" src="./img/icons/arrow-top.svg" alt="arrow" />
+							</div>
+							<div class="faq__answer">
+								<p class="text">
+									Мы&#160;придерживаемся высоких стандартов качества и&#160;стремимся создавать уникальный дизайн, отвечающий потребностям и&#160;ожиданиям наших
+									клиентов. Наши дизайнеры постоянно совершенствуют свои навыки и&#160;следят за&#160;новыми трендами в&#160;дизайне.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="mailist">
+			<div class="container">
+				<div class="mailist__content">
+					<div class="mailist__left">
+						<div class="mailist_title">
+							<h1>
+								Подпишись <br />
+								на&#160;рассылку
+							</h1>
+							<div class="text">
+								<p>
+									Отправляем анонсы новых статей, <br />
+									выпусков и&#160;трансляций
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="mailist__right">
+						<div>
+							<div class="mailsit__inputs">
+								<div class="mailist__input">
+									<input type="text" placeholder="Электронная почта" />
+								</div>
+								<div class="mailist__input">
+									<input type="text" placeholder="Дата (например, 01.01.1990)" />
+								</div>
+								<div class="mailist__input">
+									<input type="tel" name="phone" id="phone" class="phone" pattern="\+\d{1,3}\s?\(\d{3}\)\s?\d{3}-\d{2}-\d{2}" placeholder="Телефон" />
+								</div>
+								<div class="mailist__input">
+									<input type="text" placeholder="Время (например, 10:00)" />
+								</div>
+							</div>
+						</div>
+						<form class="mailist__checkbox">
+							<input type="checkbox" id="personal-data-agreement-1" />
+							<label for="personal-data-agreement-1" class="caption">
+								<span class="checkbox">
+									<span class="check"> </span>
+								</span>
+								Я&#160;согласен (-а) на&#160;обработку персональных данных</label
+							>
+						</form>
+						<div class="mailist__button link">
+							<a class="mail-btn">Подписаться</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer id="footer">
+			<div class="container">
+				<div class="footer">
+					<div class="footer__logo">
+						<img class="logo__img" src="./img/icons/logo-white.svg" alt="" />
+						<div class="footer__icons">
+							<img src="./img/icons/youtube.svg" alt="" />
+							<img src="./img/icons/telegram.svg" alt="" />
+							<img src="./img/icons/vk.svg" alt="" />
+						</div>
+					</div>
+
+					<div class="footer__nav">
+						<div class="footer__nav_left">
+							<a class="link" href="#!">О&#160;нас</a>
+							<a class="link" href="#!">Проекты</a>
+							<a class="link" href="#!">Новости</a>
+						</div>
+						<div class="footer__nav_right">
+							<a class="link" href="#!">FAQ</a>
+							<a class="link" href="#!">Контакты</a>
+						</div>
+					</div>
+
+					<div class="footer__contact">
+						<div class="footer__address link">
+							г. Горгород,<br />
+							ул.&#160;Мегаполисная, 1
+						</div>
+						<div class="footer__number link">+7&#160;(000-00)&#160;0-00-00</div>
+						<div class="footer__email link">email@email.ru</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://unpkg.com/imask"></script>
+		<script src="./js/index.bundle.js"></script>
+	</body>
 </html>
