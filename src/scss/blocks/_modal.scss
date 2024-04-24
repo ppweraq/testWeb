@@ -12,8 +12,8 @@
 
 .modal__dialog {
     max-width: 520px;
-    width: 100%; /* Ширина 100% */
-    max-height: calc(100vh - 80px); /* Максимальная высота с учетом отступов */
+    width: 100%; 
+    max-height: calc(100vh - 80px); 
     position: relative;
     margin: auto;
     overflow: hidden;
@@ -36,7 +36,14 @@
         max-height: none;
         height: 100%;
         border-radius: 0;
-        // margin: 0; /* Удалите скругление границ для полноэкранного отображения */
+
+        .modal__content {
+            margin-top: 80px;
+            padding: 0 20px;
+        }
+        .modal__input {
+            max-width: 100%;
+        }
     }
 }
 
@@ -69,7 +76,6 @@
     gap: 40px;
     max-width: 440px;
     height:51px;
-    // box-shadow:0 4px 15px rgba(0,0,0,.2);
     border: 1px solid rgba(15, 15, 23, 1);
     border-radius: 10px;
     font-size:16px;
@@ -80,14 +86,11 @@
         margin-top: 20px;
     }
 }
-// .modal .btn{
-//     display:block;
-//     width:280px;
-//     margin:0 auto
-// }
-.modal__button {
-    margin-top: 30px;
-}
+
+.modal__button.mailist__button {
+        width: 126px;
+        height: 45px;
+    }
 .show{
     display:block;
     display: flex;

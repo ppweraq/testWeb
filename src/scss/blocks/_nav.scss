@@ -2,8 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-
 }
 .nav_logo {
   flex-shrink: 0;
@@ -13,7 +11,7 @@
   gap: 10px;
 
   li {
-    padding: 10px;    
+    padding: 10px;
   }
 
   .nav_link:hover {
@@ -24,9 +22,29 @@ a {
   color: var(--text-color);
 }
 
-.nav_btn a {
+.btn_white {
+  position: relative;
+  display: inline-block;
   padding: 12px 20px;
   border-radius: 40px;
-  border: 1px solid;
-  border-image: linear-gradient(180deg, #fb8627 0%, #f5bef6 100%) 1;
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  text-decoration: none;
+}
+.nav_btn:hover {
+  .btn_white {
+    background-color: transparent;
+  }
+}
+
+.btn_white::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  border-radius: 40px;
+  background: linear-gradient(180deg, #fb8627 0%, #f5bef6 100%);
 }

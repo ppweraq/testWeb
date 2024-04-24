@@ -8,33 +8,33 @@
   display: none;
   width: 100%;
   left: 0;
-  padding-top: 30px;
   top: 100%;
-  gap: 60px;
-  background-color: pink;
-
-  // align-items: center;
-
+  background-color: var(--page-bg);
   opacity: 0;
-  transition: top 0.5s, opacity 0.5s;
+  transition: opacity 0.5s;
   z-index: 1;
+  gap: 60px;
 
-  a {
-    padding-bottom: 15px;
-    display: block;
-  }
+  padding-left: 450px;
+  padding-bottom: 45px;
+
   .menu_column {
+    a {
+      padding-bottom: 15px;
+    }
+
     a:hover {
       color: var(--text-color-hover);
     }
   }
 }
 
-.dropdown:hover .dropdown-content, .dropdown-content:hover {
-  display: flex;
-  opacity: 1;
+@include laptop {
+  .dropdown-content {
+    padding-left: 0;
+    justify-content: center;
+  }
 }
-
 .arrow_icon {
   transition: transform 1s ease;
 }

@@ -1,15 +1,12 @@
 .header {
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 	z-index: 1000;
-	// top: 0;
-    // left: 0;
-    // width: 100%;
 	background: var(--page-bg);
-
 	padding: 20px 0 15px 0;
 	border-bottom: 1px solid var(--border-opacity);
-	// position: fixed;
-}
-
+  }
   
   

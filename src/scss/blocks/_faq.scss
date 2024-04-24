@@ -1,9 +1,9 @@
 .FAQ {
-@include mobile {
-  .container {
-    padding: 0 10px;
+  @include mobile {
+    .container {
+      padding: 0 10px;
+    }
   }
-}
 }
 
 .faq {
@@ -46,12 +46,10 @@
   img {
     width: 36px;
     height: 36px;
-    // display: block;
   }
 }
 .arrow_icon {
-    transition: transform 1s ease;
-
+  transition: transform 1s ease;
 }
 .faq__answer {
   max-height: 0;
