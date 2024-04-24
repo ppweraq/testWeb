@@ -9,7 +9,7 @@ gulp.task(
     gulp.series(
         'clean:dev',
         gulp.parallel('html:dev', 'sass:dev', 'images:dev', 'fonts:dev', 'files:dev', 'js:dev'),
-        'watch:dev' // Убираем server:dev из default
+        gulp.parallel('server:dev', 'watch:dev')
     )
 );
 
@@ -21,3 +21,13 @@ gulp.task(
         gulp.parallel('server:docs')
     )
 );
+
+// Добавляем функцию, которая будет выполняться для запуска задачи watch:dev
+function startWatchDev(done) {
+    const watchDevTask = gulp.series('watch:dev', function (done) {
+        console.log('watch:dev finished'); // Выводим сообщение об окончании задачи
+        done();
+    });
+
+    return watchDevTask(done);
+}
