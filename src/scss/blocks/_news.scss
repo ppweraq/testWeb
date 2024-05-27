@@ -60,6 +60,11 @@
     color: var(--text-color-hover);
     margin-bottom: 20px;
   }
+  .news-img {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
 
   &:hover {
     img {

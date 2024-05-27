@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Стартовый шаблон</title>
+		<title>Document</title>
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
@@ -24,7 +24,6 @@
 							</a>
 							<div class="dropdown-content">
 								<ul class="menu_column">
-									<li><a href="#">О&#160;500 на&#160;700</a></li>
 									<li><a href="#">Документы</a></li>
 									<li><a href="#">Устойчивое развитие</a></li>
 								</ul>
@@ -70,9 +69,6 @@
 
 						<div class="mobile-sub">
 							<ul class="mobile-sub-list">
-								<li class="mobile-sub-list__item">
-									<a href="#!" class="mobile-sub-list__link">О&#160;500на700</a>
-								</li>
 								<li class="mobile-sub-list__item">
 									<a href="#!" class="mobile-sub-list__link">Документы</a>
 								</li>
@@ -166,11 +162,7 @@
 								</p>
 							</div>
 							<div class="slider__right_page">
-								<picture>
-									<source srcset="./img/slider/site1.webp 1x, ./img/slider/site1@2x.webp 2x" type="image/webp" />
-									<source srcset="./img/slider/site1.png 1x, ./img/slider/site1@2x.png 2x" type="image/png" />
-									<img src="./img/slider/site1.png" alt="site" />
-								</picture>
+								<img src="./img/slider/site.svg" alt="site" />
 							</div>
 						</div>
 					</div>
@@ -187,11 +179,7 @@
 								</p>
 							</div>
 							<div class="slider__right_page">
-								<picture>
-									<source srcset="./img/slider/site2.webp 1x, ./img/slider/site2@2x.webp 2x" type="image/webp" />
-									<source srcset="./img/slider/site2.png 1x, ./img/slider/site2@2x.png 2x" type="image/png" />
-									<img src="./img/slider/site2.png" alt="site" />
-								</picture>
+								<img src="./img/slider/site.svg" alt="site" />
 							</div>
 						</div>
 					</div>
@@ -208,11 +196,7 @@
 								</p>
 							</div>
 							<div class="slider__right_page">
-								<picture>
-									<source srcset="./img/slider/site3.webp 1x, ./img/slider/site3@2x.webp 2x" type="image/webp" />
-									<source srcset="./img/slider/site3.png 1x, ./img/slider/site3@2x.png 2x" type="image/png" />
-									<img src="./img/slider/site3.png" alt="site" />
-								</picture>
+								<img src="./img/slider/site.svg" alt="site" />
 							</div>
 						</div>
 					</div>
@@ -239,15 +223,17 @@
 
 						<div class="swiper-slide">
 							<div class="news__item">
-								<picture>
-									<source srcset="./img/news/news1.webp 1x, ./img/news/news1@2x.webp 2x" type="image/webp" />
-									<source srcset="./img/news/news1.png 1x, ./img/news/news1@2x.png 2x" type="image/png" />
-									<img src="./img/news/news1.png" alt="" />
-								</picture>
+								<div class="news-img">
+									<picture>
+										<source srcset="./img/news/news.webp 1x, ./img/news/news@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/news/news.png 1x, ./img/news/news@2x.png 2x" type="image/png" />
+										<img src="./img/news/news.png" alt="" />
+									</picture>
+								</div>
 								<h2 class="news__subtitle">Заголовок новости 1</h2>
 								<div class="text news__descr">
 									Описание новости в&#160;3 строки Описание новости в&#160;3 строкиОписание новости в&#160;3 строкиОписание новости в&#160;3 строки Описание новости
-									в 3 строки Описание&#8230;
+									в&#160;3 строки Описание&#8230;
 								</div>
 								<div class="text news__date">01&#160;января 1990</div>
 							</div>
@@ -255,15 +241,17 @@
 
 						<div class="swiper-slide">
 							<div class="news__item">
-								<picture>
-									<source srcset="./img/news/news2.webp 1x, ./img/news/news2@2x.webp 2x" type="image/webp" />
-									<source srcset="./img/news/news2.png 1x, ./img/news/news2@2x.png 2x" type="image/png" />
-									<img src="./img/news/news2.png" alt="" />
-								</picture>
+								<div class="news-img">
+									<picture>
+										<source srcset="./img/news/news.webp 1x, ./img/news/news@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/news/news.png 1x, ./img/news/news@2x.png 2x" type="image/png" />
+										<img src="./img/news/news.png" alt="" />
+									</picture>
+								</div>
 								<h2 class="news__subtitle">Заголовок новости 2</h2>
 								<div class="text news__descr">
 									Описание новости в&#160;3 строки Описание новости в&#160;3 строкиОписание новости в&#160;3 строкиОписание новости в&#160;3 строки Описание новости
-									в 3 строки Описание&#8230;
+									в&#160;3 строки Описание&#8230;
 								</div>
 								<div class="text news__date">01&#160;января 1990</div>
 							</div>
@@ -271,15 +259,17 @@
 
 						<div class="swiper-slide">
 							<div class="news__item">
-								<picture>
-									<source srcset="./img/news/news3.webp 1x, ./img/news/news3@2x.webp 2x" type="image/webp" />
-									<source srcset="./img/news/news3.png 1x, ./img/news/news3@2x.png 2x" type="image/png" />
-									<img src="./img/news/news3.png" alt="" />
-								</picture>
+								<div class="news-img">
+									<picture>
+										<source srcset="./img/news/news.webp 1x, ./img/news/news@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/news/news.png 1x, ./img/news/news@2x.png 2x" type="image/png" />
+										<img src="./img/news/news.png" alt="" />
+									</picture>
+								</div>
 								<h2 class="news__subtitle">Заголовок новости 3</h2>
 								<div class="text news__descr">
 									Описание новости в&#160;3 строки Описание новости в&#160;3 строкиОписание новости в&#160;3 строкиОписание новости в&#160;3 строки Описание новости
-									в 3 строки Описание&#8230;
+									в&#160;3 строки Описание&#8230;
 								</div>
 								<div class="text news__date">01&#160;января 1990</div>
 							</div>
@@ -287,15 +277,17 @@
 
 						<div class="swiper-slide">
 							<div class="news__item">
-								<picture>
-									<source srcset="./img/news/news4.webp 1x, ./img/news/news4@2x.webp 2x" type="image/webp" />
-									<source srcset="./img/news/news4.png 1x, ./img/news/news4@2x.png 2x" type="image/png" />
-									<img src="./img/news/news4.png" alt="" />
-								</picture>
+								<div class="news-img">
+									<picture>
+										<source srcset="./img/news/news.webp 1x, ./img/news/news@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/news/news.png 1x, ./img/news/news@2x.png 2x" type="image/png" />
+										<img src="./img/news/news.png" alt="" />
+									</picture>
+								</div>
 								<h2 class="news__subtitle">Заголовок новости 4</h2>
 								<div class="text news__descr">
 									Описание новости в&#160;3 строки Описание новости в&#160;3 строкиОписание новости в&#160;3 строкиОписание новости в&#160;3 строки Описание новости
-									в 3 строки Описание&#8230;
+									в&#160;3 строки Описание&#8230;
 								</div>
 								<div class="text news__date">01&#160;января 1990</div>
 							</div>
@@ -303,15 +295,17 @@
 
 						<div class="swiper-slide">
 							<div class="news__item">
-								<picture>
-									<source srcset="./img/news/news5.webp 1x, ./img/news/news5@2x.webp 2x" type="image/webp" />
-									<source srcset="./img/news/news5.png 1x, ./img/news/news5@2x.png 2x" type="image/png" />
-									<img src="./img/news/news5.png" alt="" />
-								</picture>
+								<div class="news-img">
+									<picture>
+										<source srcset="./img/news/news.webp 1x, ./img/news/news@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/news/news.png 1x, ./img/news/news@2x.png 2x" type="image/png" />
+										<img src="./img/news/news.png" alt="" />
+									</picture>
+								</div>
 								<h2 class="news__subtitle">Заголовок новости 5</h2>
 								<div class="text news__descr">
 									Описание новости в&#160;3 строки Описание новости в&#160;3 строкиОписание новости в&#160;3 строкиОписание новости в&#160;3 строки Описание новости
-									в 3 строки Описание&#8230;
+									в&#160;3 строки Описание&#8230;
 								</div>
 								<div class="text news__date">01&#160;января 1990</div>
 							</div>
@@ -319,15 +313,17 @@
 
 						<div class="swiper-slide">
 							<div class="news__item">
-								<picture>
-									<source srcset="./img/news/news6.webp 1x, ./img/news/news6@2x.webp 2x" type="image/webp" />
-									<source srcset="./img/news/news6.png 1x, ./img/news/news6@2x.png 2x" type="image/png" />
-									<img src="./img/news/news6.png" alt="" />
-								</picture>
+								<div class="news-img">
+									<picture>
+										<source srcset="./img/news/news.webp 1x, ./img/news/news@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/news/news.png 1x, ./img/news/news@2x.png 2x" type="image/png" />
+										<img src="./img/news/news.png" alt="" />
+									</picture>
+								</div>
 								<h2 class="news__subtitle">Заголовок новости 6</h2>
 								<div class="text news__descr">
 									Описание новости в&#160;3 строки Описание новости в&#160;3 строкиОписание новости в&#160;3 строкиОписание новости в&#160;3 строки Описание новости
-									в 3 строки Описание&#8230;
+									в&#160;3 строки Описание&#8230;
 								</div>
 								<div class="text news__date">01&#160;января 1990</div>
 							</div>
@@ -450,7 +446,7 @@
 			<div class="container">
 				<div class="footer">
 					<div class="footer__logo">
-						<img class="logo__img" src="./img/icons/logo-white.svg" alt="" />
+						<img class="logo__img" src="./img/icons/logo.svg" alt="" />
 						<div class="footer__icons">
 							<img src="./img/icons/youtube.svg" alt="" />
 							<img src="./img/icons/telegram.svg" alt="" />
@@ -473,7 +469,7 @@
 					<div class="footer__contact">
 						<div class="footer__address link">
 							г. Горгород,<br />
-							ул.&#160;Мегаполисная, 1
+							ул.&#160;Улица, 1
 						</div>
 						<div class="footer__number link">+7&#160;(000-00)&#160;0-00-00</div>
 						<div class="footer__email link">email@email.ru</div>

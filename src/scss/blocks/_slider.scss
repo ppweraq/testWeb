@@ -9,6 +9,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: var(--container-padding) 0;
+
+  .slider__right_page{
+    margin: 0 auto;
+  }
   @include laptop {
     display: flex;
   }
